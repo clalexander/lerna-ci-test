@@ -3,21 +3,30 @@
   "version": "1.0.0",
   "description": "Repo to test Lerna CI",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/clalexander/lerna-ci-test.git"
   },
-  "author": "Christopher Alexander",
+  "author": {
+    "name": "Christopher Alexander",
+    "email": "clalex005@gmail.com",
+    "url": "https://github.com/clalexander"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/clalexander/lerna-ci-test/issues"
   },
   "homepage": "https://github.com/clalexander/lerna-ci-test",
-  "dependencies": {},
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "test": "lerna run test"
+  },
   "devDependencies": {
-    "lerna": "^7.1.5"
+    "@types/node": "^20.5.0",
+    "lerna": "^7.1.5",
+    "typescript": "^5.1.6"
   }
 }
