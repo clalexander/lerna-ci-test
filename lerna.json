@@ -4,13 +4,14 @@
   "version": "independent",
   "command": {
     "version": {
+      "message": "chore(release): publish %s [skip ci]",
       "conventionalCommits": true,
-      "allowBranch": ["master", "next", "beta"],
-      "message": "chore(release): publish %s"
+      "changelogPreset": "conventionalCommits",
+      "allowBranch": ["master", "next", "beta"]
     },
     "publish": {
-      "allowBranch": ["master", "next", "beta"],
       "message": "chore(release): publish",
+      "allowBranch": ["master", "next", "beta"],
       "registry": "https://registry.npmjs.org/"
     },
     "bootstrap": {

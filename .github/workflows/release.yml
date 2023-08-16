@@ -41,6 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           # lerna-semantic-release perform
-        run: |
-          lerna-semantic-release pre
-          lerna-semantic-release post
+        run: npx lerna version
+        # run: |
+        #   lerna-semantic-release pre
+        #   lerna-semantic-release post
