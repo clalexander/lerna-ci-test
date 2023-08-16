@@ -38,7 +38,7 @@ jobs:
         run: npx lerna run test
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           # lerna-semantic-release perform
         run: npx lerna version --yes
