@@ -6,7 +6,7 @@
     "version": {
       "message": "chore(release): version %s [skip ci]",
       "conventionalCommits": true,
-      "changelogPreset": "conventional-changelog-conventionalCommits",
+      "changelogPreset": "conventionalcommits",
       "allowBranch": ["main", "next", "beta"]
     },
     "publish": {
