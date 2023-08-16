@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0](https://github.com/clalexander/lerna-ci-test/compare/package-a@0.1.0...package-a@1.0.0) (2023-08-16)
+
+
+### Features
+
+* add package a [#5](https://github.com/clalexander/lerna-ci-test/issues/5) ([445a9ce](https://github.com/clalexander/lerna-ci-test/commit/445a9cee81130797be13c21d8a1b55156062dd70))
+
+
+
 ## 0.1.0 (2023-08-16)
 
 
