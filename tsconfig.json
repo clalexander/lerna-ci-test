@@ -34,11 +34,8 @@
 		"removeComments": true
 	},
 	"include": [
-		"**/*.ts",
-    "**/*.js",
-		"**/*.mjs",
-		"**/*.cjs",
-		"**/*.json"
+		"src/**/*",
+		"tests/**/*"
 	],
 	"exclude": ["node_modules", "tmp", "dist", "coverage"]
 }
