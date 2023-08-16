@@ -1,0 +1,12 @@
+{
+  "name": "package-a",
+  "version": "1.0.0",
+  "description": "Test package A",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Test successful!\""
+  },
+  "author": "",
+  "license": "ISC"
+}
