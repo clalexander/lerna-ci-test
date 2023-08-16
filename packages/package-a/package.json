@@ -7,6 +7,6 @@
     "build": "tsc",
     "test": "echo \"Test successful!\""
   },
-  "author": "",
+  "author": "Christopher Alexander",
   "license": "ISC"
 }
