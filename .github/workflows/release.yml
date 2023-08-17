@@ -43,7 +43,7 @@ jobs:
         run: npx lerna run test
       - name: Configure Git User
         run: |
-          git config --global user.email "test@email.com"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config --global user.name "@$GITHUB_ACTOR"
       - name: Add Unstaged Changes
         run: git add .
@@ -69,13 +69,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Rebase
         run: |
-          git config --global user.email "test@email.com"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config --global user.name "@$GITHUB_ACTOR"
           git status
           echo "Prefetch"
           git fetch origin $DEVELOPMENT_BRANCH
           echo "Fetched"
-          git pull $DEVELOPMENT_BRANCH
+          git pull origin $DEVELOPMENT_BRANCH
           echo "Pulled"
           git rebase $DEVELOPMENT_BRANCH
           echo "Rebased"
