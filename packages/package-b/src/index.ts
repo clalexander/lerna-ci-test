@@ -7,3 +7,5 @@ export function sayHelloToEveryone(people: string[]): string[] {
 export function sayHolaToEveryone(people: string[]): string[] {
   return people.map((person) => sayHola(person));
 }
+
+// fix
