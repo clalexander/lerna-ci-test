@@ -53,7 +53,9 @@ jobs:
   rebase:
     name: Rebase
     if: ${{ github.ref == 'refs/heads/main' }}
+    needs: release
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
