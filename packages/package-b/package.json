@@ -1,6 +1,6 @@
 {
   "name": "package-b",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test package B",
   "main": "dist/index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "author": "Christopher Alexander",
   "license": "ISC",
   "dependencies": {
-    "package-a": "^1.1.0"
+    "package-a": "^1.1.1"
   }
 }
