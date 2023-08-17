@@ -72,7 +72,9 @@ jobs:
           git config --global user.email "test@email.com"
           git config --global user.name "@$GITHUB_ACTOR"
           git status
-          echo "Prepull"
+          echo "Prefetch"
+          git fetch origin $DEVELOPMENT_BRANCH
+          echo "Fetched"
           git pull $DEVELOPMENT_BRANCH
           echo "Pulled"
           git rebase $DEVELOPMENT_BRANCH
