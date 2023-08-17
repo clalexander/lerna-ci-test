@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/clalexander/lerna-ci-test/compare/package-a@1.1.1...package-a@1.2.0) (2023-08-17)
+
+
+### Features
+
+* add say hola ([79f8d27](https://github.com/clalexander/lerna-ci-test/commit/79f8d276ab0a975312501585a2c8fecef5f6e305))
+
+
+
 ## [1.1.1](https://github.com/clalexander/lerna-ci-test/compare/package-a@1.1.0...package-a@1.1.1) (2023-08-17)
 
 **Note:** Version bump only for package package-a
