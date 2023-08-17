@@ -62,8 +62,13 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
     steps:
+      - name: Get Current PR
+        uses: 8BitJonny/gh-get-current-pr@2.2.0
+        id: PR
       - name: Rebase
         uses: cirrus-actions/rebase@1.8
+        if: ${{ steps.PR.outputs.pr_found == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.PR.outputs.number }}
       
