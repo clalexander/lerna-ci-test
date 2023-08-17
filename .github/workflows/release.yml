@@ -75,10 +75,10 @@ jobs:
           echo "Prefetch"
           git fetch origin $DEVELOPMENT_BRANCH
           echo "Fetched"
-          git pull origin $DEVELOPMENT_BRANCH:$DEVELOPMENT_BRANCH
-          echo "Pulled"
-          git rebase $DEVELOPMENT_BRANCH
+          git checkout $DEVELOPMENT_BRANCH
+          echo "Checkedout"
+          git rebase main
           echo "Rebased"
-          git push origin $DEVELOPMENT_BRANCH:$DEVELOPMENT_BRANCH
+          git push
           echo "Pushed"
       
