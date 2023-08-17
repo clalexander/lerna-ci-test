@@ -7,12 +7,22 @@
       "message": "chore(release): version %s [skip ci]",
       "conventionalCommits": true,
       "changelogPreset": "conventionalcommits",
-      "allowBranch": ["main", "next", "beta"]
+      "allowBranch": ["main", "next", "beta"],
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.json",
+        "packages/**/tests/**"
+      ]
     },
     "publish": {
       "message": "chore(release): publish %s [skip ci]",
       "allowBranch": ["main", "next", "beta"],
-      "registry": "https://registry.npmjs.org/"
+      "registry": "https://registry.npmjs.org/",
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.json",
+        "packages/**/tests/**"
+      ]
     }
   }
 }
