@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Test successful!\""
+    "test": "echo \"Test successful!\"",
+    "lint": "eslint ."
   },
   "author": "Christopher Alexander",
   "license": "ISC",

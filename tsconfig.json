@@ -33,9 +33,5 @@
 		"forceConsistentCasingInFileNames": true,
 		"removeComments": true
 	},
-	"include": [
-		"src/**/*",
-		"tests/**/*"
-	],
-	"exclude": ["node_modules", "tmp", "dist", "coverage"]
+	"exclude": ["node_modules", "temp", "dist", "coverage"]
 }
