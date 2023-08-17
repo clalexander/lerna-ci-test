@@ -1,6 +1,6 @@
 {
   "name": "package-b",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "Test package B",
   "main": "dist/index.js",
   "scripts": {
