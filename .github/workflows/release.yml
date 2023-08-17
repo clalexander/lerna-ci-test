@@ -11,6 +11,7 @@ permissions:
   contents: read # for checkout
 
 env:
+  MAIN_BRANCH: main
   DEVELOPMENT_BRANCH: dev
 
 jobs:
@@ -55,7 +56,7 @@ jobs:
         run: npx lerna version --yes --conventional-graduate
   rebase:
     name: Rebase
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/$MAIN_BRANCH' }}
     needs: release
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -80,7 +81,7 @@ jobs:
           echo "Checkedout"
           git branch
           git status
-          git rebase main
+          git rebase origin/$MAIN_BRANCH
           echo "Rebased"
           git push
           echo "Pushed"
