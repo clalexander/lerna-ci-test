@@ -48,6 +48,20 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          # npx lerna publish from-package
+          # npx lerna publish from-package --yes --conventional-graduate
         run: npx lerna version --yes --conventional-graduate
+  rebase:
+    name: Rebase
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    steps:
+      - name: Rebase
+        uses: cirrus-actions/rebase@1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
