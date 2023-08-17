@@ -76,7 +76,7 @@ jobs:
           git fetch origin $DEVELOPMENT_BRANCH
           echo "Fetched"
           git checkout $DEVELOPMENT_BRANCH
-          git branch
+          git remote -v
           echo "Checkedout"
           git rebase main
           echo "Rebased"
