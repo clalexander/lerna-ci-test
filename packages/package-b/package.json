@@ -1,0 +1,15 @@
+{
+  "name": "package-b",
+  "version": "1.0.0-alpha.0",
+  "description": "Test package B",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Test successful!\""
+  },
+  "author": "Christopher Alexander",
+  "license": "ISC",
+  "dependencies": {
+    "package-a": "^1.1.0"
+  }
+}
