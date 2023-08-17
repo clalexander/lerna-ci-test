@@ -10,6 +10,9 @@ on:
 permissions:
   contents: read # for checkout
 
+env:
+  DEVELOPMENT_BRANCH: dev
+
 jobs:
   release:
     name: Release
@@ -62,13 +65,15 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
     steps:
-      - name: Get Current PR
-        uses: 8BitJonny/gh-get-current-pr@2.2.0
-        id: PR
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Rebase
-        uses: cirrus-actions/rebase@1.8
-        if: ${{ steps.PR.outputs.pr_found == 'true' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ steps.PR.outputs.number }}
+        run: |
+          git config --global user.email "test@email.com"
+          git config --global user.name "@$GITHUB_ACTOR"
+          git status
+          git pull
+          git rebase origin/$DEVELOPMENT_BRANCH
       
