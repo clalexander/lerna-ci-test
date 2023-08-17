@@ -42,5 +42,7 @@ jobs:
         run: npm audit signatures
       - name: Build
         run: npx lerna run build
+      - name: Lint
+        run: npx lerna run lint
       - name: Test
         run: npx lerna run test
