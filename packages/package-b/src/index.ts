@@ -8,4 +8,4 @@ export function sayHolaToEveryone(people: string[]): string[] {
   return people.map((person) => sayHola(person));
 }
 
-// bump version one more time
+// bump version again
