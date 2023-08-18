@@ -79,5 +79,5 @@ jobs:
           git branch
           git status
           git rebase origin/main
-          git push
+          git push origin origin/$DEVELOPMENT_BRANCH:$DEVELOPMENT_BRANCH
       
