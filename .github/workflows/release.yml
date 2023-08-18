@@ -77,8 +77,6 @@ jobs:
           set -o xtrace
           git fetch origin $DEVELOPMENT_BRANCH
           git checkout -b origin/$DEVELOPMENT_BRANCH
-          git pull origin $DEVELOPMENT_BRANCH
-          git status
           git rebase origin/main
           git push origin origin/$DEVELOPMENT_BRANCH:$DEVELOPMENT_BRANCH
       
