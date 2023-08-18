@@ -72,16 +72,12 @@ jobs:
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config --global user.name "@$GITHUB_ACTOR"
           git status
-          echo "Prefetch"
+          set -o xtrace
           git fetch origin $DEVELOPMENT_BRANCH
-          echo "Fetched"
-          git checkout $DEVELOPMENT_BRANCH
+          git checkout -b origin/$DEVELOPMENT_BRANCH
           git remote -v
-          echo "Checkedout"
           git branch
           git status
           git rebase origin/main
-          echo "Rebased"
           git push
-          echo "Pushed"
       
