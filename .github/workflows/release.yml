@@ -75,7 +75,8 @@ jobs:
           git config --global user.name "@$GITHUB_ACTOR"
           git status
           set -o xtrace
-          # quick test
+          git fetch origin main
+          git pull
           git fetch origin $DEVELOPMENT_BRANCH
           git checkout -b origin/$DEVELOPMENT_BRANCH
           git rebase origin/main
