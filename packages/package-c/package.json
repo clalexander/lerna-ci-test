@@ -1,0 +1,13 @@
+{
+  "name": "package-c",
+  "version": "0.0.1",
+  "description": "Test package C",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Test successful!\"",
+    "lint": "eslint ."
+  },
+  "author": "Christopher Alexander",
+  "license": "ISC"
+}
